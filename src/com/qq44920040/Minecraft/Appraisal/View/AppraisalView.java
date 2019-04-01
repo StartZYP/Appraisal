@@ -39,8 +39,8 @@ public class AppraisalView {
                 inv.setItem(i,itemStackdown);
             }
         }
-        inv.setItem(11,null);
-        inv.setItem(15,null);
+        inv.setItem(10,null);
+        inv.setItem(16,null);
         ItemStack button = new ItemStack(Material.LEVER,1);
         ItemMeta itemMetabutton = button.getItemMeta();
         itemMetabutton.setDisplayName("§c§l鉴定");

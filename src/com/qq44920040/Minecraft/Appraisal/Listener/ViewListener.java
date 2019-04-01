@@ -23,8 +23,8 @@ public class ViewListener implements Listener {
             if (Solt==40){
                 event.setCancelled(true);
                 Player player = (Player)event.getWhoClicked();
-                ItemStack wuqi = inventoryView.getItem(11);
-                ItemStack Tool = inventoryView.getItem(15);
+                ItemStack wuqi = inventoryView.getItem(10);
+                ItemStack Tool = inventoryView.getItem(16);
                 if (wuqi!=null&&Tool!=null){
                     if (wuqi.hasItemMeta()&&Tool.hasItemMeta()){
                         System.out.println("进入mate");
@@ -69,7 +69,7 @@ public class ViewListener implements Listener {
                     }
                 }
                 player.sendMessage("§c[系统]§a请检查道具放置是否正确");
-            }else if(Solt==11||Solt==15){
+            }else if(Solt==10||Solt==16){
                 event.setCancelled(false);
             }else if (Solt<=53&&Solt>=0){
                 event.setCancelled(true);
@@ -82,8 +82,8 @@ public class ViewListener implements Listener {
     public void Inventorycloseevent(InventoryCloseEvent event){
         InventoryView inventoryView = event.getView();
         if (inventoryView.getTitle().equalsIgnoreCase(Main.InvTitle)){
-            ItemStack wuqi = inventoryView.getItem(11);
-            ItemStack Tool = inventoryView.getItem(15);
+            ItemStack wuqi = inventoryView.getItem(10);
+            ItemStack Tool = inventoryView.getItem(16);
             if (wuqi!=null||Tool!=null){
                 event.getPlayer().getInventory().addItem(wuqi);
                 event.getPlayer().getInventory().addItem(Tool);

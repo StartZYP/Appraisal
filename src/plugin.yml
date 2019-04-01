@@ -1,0 +1,5 @@
+name: Appraisal
+main: com.qq44920040.Minecraft.Appraisal.Main
+version: 1.0
+commands:
+  Appraisal:

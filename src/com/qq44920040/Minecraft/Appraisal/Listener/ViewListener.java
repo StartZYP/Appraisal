@@ -59,8 +59,8 @@ public class ViewListener implements Listener {
                                         wuqimeta.setLore(wuqiLores);
                                         wuqi.setItemMeta(wuqimeta);
                                         player.getInventory().addItem(wuqi);
-                                        inventoryView.setItem(11,null);
-                                        inventoryView.setItem(15,null);
+                                        inventoryView.setItem(10,null);
+                                        inventoryView.setItem(16,null);
                                         return;
                                     }
                                 }

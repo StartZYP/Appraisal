@@ -47,7 +47,7 @@ public class ViewListener implements Listener {
                                         System.out.println("索引:"+Index);
                                         wuqiLores.remove(Index);
                                         System.out.println(lorelist.size()+"lore个数");
-                                        int rundomnum = (int)(Math.random()*lorelist.size()+1);
+                                        int rundomnum = (int)(Math.random()*lorelist.size());
                                         System.out.println(rundomnum+"随机数");
                                         System.out.println(lorelist.get(rundomnum-1));
                                         String[] MultilineLore = lorelist.get(rundomnum-1).replace("{Player}",player.getName()).split("\\|");

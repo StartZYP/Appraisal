@@ -21,12 +21,12 @@ public class AppraisalView {
 
         ItemStack itemStackRight = new ItemStack(Material.STAINED_GLASS_PANE,1,(short)3);
         ItemMeta itemMetaRight = itemStackRight.getItemMeta();
-        itemMetaRight.setDisplayName("§d放入需要鉴定的武器");
+        itemMetaRight.setDisplayName("§d放入需要觉醒的武器");
         itemStackRight.setItemMeta(itemMetaRight);
 
         ItemStack itemStackLift = new ItemStack(Material.STAINED_GLASS_PANE,1,(short)5);
         ItemMeta itemMetaLift = itemStackLift.getItemMeta();
-        itemMetaLift.setDisplayName("§e放入鉴定卷轴");
+        itemMetaLift.setDisplayName("§e放入觉醒卷轴");
         itemStackLift.setItemMeta(itemMetaLift);
         for (int i=0;i<=53;i++){
             if (i==0||i==1||i==2||i==9||i==11||i==18||i==19||i==20){
@@ -43,7 +43,7 @@ public class AppraisalView {
         inv.setItem(16,null);
         ItemStack button = new ItemStack(Material.LEVER,1);
         ItemMeta itemMetabutton = button.getItemMeta();
-        itemMetabutton.setDisplayName("§c§l鉴定");
+        itemMetabutton.setDisplayName("§c§l觉醒");
         button.setItemMeta(itemMetabutton);
         inv.setItem(40,button);
         return inv;

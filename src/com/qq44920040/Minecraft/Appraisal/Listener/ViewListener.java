@@ -1,11 +1,13 @@
 package com.qq44920040.Minecraft.Appraisal.Listener;
 
 import com.qq44920040.Minecraft.Appraisal.Main;
+
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryCloseEvent;
+import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryView;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -16,10 +18,14 @@ import java.util.Set;
 public class ViewListener implements Listener {
     @EventHandler
     public void InventoryClickevent(InventoryClickEvent event){
-        InventoryView inventoryView = event.getView();
+        if (event==null){
+            return;
+        }
+
+        Inventory inventoryView = event.getClickedInventory();
         if (inventoryView.getTitle().equalsIgnoreCase(Main.InvTitle)){
             int Solt = event.getRawSlot();
-            //System.out.println(Solt);
+            System.out.println(Solt);
             if (Solt==40){
                 event.setCancelled(true);
                 Player player = (Player)event.getWhoClicked();
@@ -27,7 +33,7 @@ public class ViewListener implements Listener {
                 ItemStack Tool = inventoryView.getItem(16);
                 if (wuqi!=null&&Tool!=null){
                     if (wuqi.hasItemMeta()&&Tool.hasItemMeta()){
-                        //System.out.println("进入mate");
+                        System.out.println("进入mate");
                         ItemMeta wuqimeta= wuqi.getItemMeta();
                         ItemMeta ToolMeta = Tool.getItemMeta();
                         if (wuqimeta.hasLore()&&ToolMeta.hasLore()){
@@ -58,6 +64,8 @@ public class ViewListener implements Listener {
                                         }
                                         wuqimeta.setLore(wuqiLores);
                                         wuqi.setItemMeta(wuqimeta);
+                                        Tool.setAmount(Tool.getAmount()-1);
+                                        player.getInventory().addItem(Tool);
                                         player.getInventory().addItem(wuqi);
                                         inventoryView.setItem(10,null);
                                         inventoryView.setItem(16,null);

@@ -1,0 +1,18 @@
+Appraisal:
+  ViewTitle: "§c鉴定界面"
+AppraisalItem:
+  "§c§l武器鉴定位1":
+    RePlaceLore:
+      - "§c§l这是替换第二行|这{Player}22是第二行3|三行"
+      - "§c§l这是随机1|这是随机1|这{Player}是随机1"
+    Value: "鉴定卷轴1"
+  "武器鉴定位2":
+    RePlaceLore:
+      - "这是替换第3二行|这{Player}是5第二行3|三行"
+      - "这是随机1|这是随{Player}机1|这是随机1"
+    Value: "鉴定卷轴2"
+  "武器鉴定位3":
+    RePlaceLore:
+      - "这是替换第2二{Player}行|这是5第二行3|三行"
+      - "这是随机1|这是3随{Player}机1|这是随机1"
+    Value: "鉴定卷轴3"
